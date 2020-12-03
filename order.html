@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizens Demand Cookies!</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Open+Sans&family=Oswald:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ad4b4bec12.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbarLink menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+
+        <div class="navbarLink">
+            <a href="products.html"><span>Our </span>Products</a>
+        </div>
+        <div class="navbarLink">
+            <a href="story.html"><span>Our </span>Story</a>
+        </div>
+
+
+        <div class="navbarBrand">
+            <a href="index.html"><img src="images/Cookie-logo.png" id="logo"></a>
+        </div>
+
+
+        <div class="navbarLink">
+            <a href="order.html">Order<span> Now</span>!</a>
+        </div>
+        <div class="navbarLink">
+            <a href="contact.html">Contact<span> Us</span></a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Citizens Demand!<sup>TM</sup> brand</h2>
+        <h1> Order Now! </h1>
+
+        <hr>
+        <div class="disclaimer"><p>Disclaimer: This isn't a real company. You won't get cookies, and that's fine because there's no payment section. Form isn't even processed. For demo purposes only.</p></div>
+        <div class="row">
+            <form method="post" action="thanks.html">
+            <!-- <form method="post" action="#" onsubmit="return saveData()"> -->
+                <div class="form">
+                    <ul>
+                        <li>
+                            <label for="chocolatechip">Chocolate Chip Cookie</label>
+                        </li>
+                        <li>
+                            <label for="chocolatechip">$1/each</label>
+                            <input class="quantityInput chocchipEach numInput" type="number" name="chocolatechipEach" id="chocolatechip" width=25px>
+                            <label for="chocolatechip">$10/doz.</label>
+                            <input class="quantityInput chocchipDoz numInput" type="number" name="chocolatechipDoz" id="chocolatechip">
+                        </li>
+                        <li>
+                            *******************
+                        </li>
+                        <li>
+                            <label for="peanutbutter">Peanut Butter Cookie</label>
+                        </li>
+                        <li>
+                            <label for="peanutbutter">$1/each</label>
+                            <input class="quantityInput" type="number" name="peanutbutterEach" id="peanutbutter" width=25px>
+                            <label for="peanutbutter">$10/doz.</label>
+                            <input class="quantityInput" type="number" name="peanutbutterDoz" id="peanutbutter">
+                        </li>
+                        <li>
+                            *******************
+                        </li>
+                        <li>
+                            <label for="seasonal">Seasonal Cookie</label>
+                        </li>
+                        <li>
+                            <label for="seasonal">$1/each</label>
+                            <input class="quantityInput" type="number" name="seasonalEach" id="seasonal" width=25px>
+                            <label for="seasonal">$10/doz.</label>
+                            <input class="quantityInput" type="number" name="seasonalDoz" id="seasonal">
+                        </li>
+                    </ul>
+                    <div>
+                        <ul class="right">
+                            <li>
+                                Subtotal: <span id="subtotal"></span>  
+                            </li>
+                            <li>
+                                Delivery Fee: <span id="fee">$5</span>
+                            </li>
+                            <li>
+                                Total: <span id="total"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="innerF">
+                    <ul>
+                        <li>
+                            <label for="name">Name: </label>
+                            <input type="text" name="name" id="name">
+                        </li>
+                        <li>
+                            <label for="address">Address: </label>
+                            <input type="text" name="address" id="address">
+                        </li>
+                        <li>
+                            <label for="city">City/State: </label>
+                            <input type="text" name="city" id="city">
+                        </li>
+                        <li>
+                            <label for="zip">Zip Code:</label>
+                            <input type="text" name="zip" id="zip">
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>How would you like us to contact you?</li>
+                        <li>
+                            <label for="email">Email: </label>
+                            <input type="email" name="email" id="email">
+                        </li>
+                        <li>
+                            <label for="phone">Phone: </label>
+                            <input type="tel" name="phone" id="phone">
+                        </li>
+                        <li>
+                            <button>Order Now</button>
+                        </li>
+                    </ul>
+                </div>
+                
+                
+                
+
+            </form>
+
+        </div>
+        <hr>
+
+    </main>
+    <footer>
+        <div>
+            <p><i class="fas fa-camera"></i> <span>Background Photo by <a
+                        href="https://unsplash.com/@graysonsmith_photography?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Grayson
+                        Smith</a> on <a
+                        href="https://unsplash.com/s/photos/cookies?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+                <i class="fas fa-cookie-bite"></i></p>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
