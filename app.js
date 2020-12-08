@@ -17,56 +17,35 @@ window.onload = function() {
 }
 
 
-let subTotalInt = 0;
+
 //function for saveData
 // # of cookies * $ added together + delivery fee = total
 // name, address, city,state zip
 //sidenote see how to get the validation for addresses?
 
-//okay this actually works
-//~~~~~~~~~~~~~~~~
 let ccEach = document.querySelector('.chocchipEach');
 let ccDoz = document.querySelector('.chocchipDoz');
 
 
 let subTotal = document.querySelector('#subtotal');
 let total = document.querySelector('#total');
-document.addEventListener('input', updateValue);
-// function updateValue(e) {
-//     if (e.target.classList.contains('quantityInput')) {
-//         let quantities = document.querySelectorAll('.quantityInput');
-//         subTotalInt = 0;
-//         for (let quantity of quantities) {
-//             if (quantity.value && parseInt(quantity.value) > 0) {
-//                 if (quantity.name.includes('Each')) {
-//                     subTotalInt += parseInt(quantity.value);
-//                 } else {
-//                     subTotalInt += (parseInt(quantity.value) * 10);
-//                     console.log(subTotalInt);
-//                 }
-//             }
-//         }
-//         subTotal.textContent = parseInt(subTotalInt);
-//     }
-// };
-//~~~~~~~~~~~~~~~~
+let numInputs = document.querySelectorAll('input[type="number"]');
+numInputs.forEach(numInput => numInput.addEventListener('input', updateValue));
+
 
 function updateValue(e) {
-    if (e.target.classList.contains('quantityInput')) {
-        let quantities = document.querySelectorAll('.quantityInput');
-        subTotalInt = 0;
-        for (let quantity of quantities) {
-            if (parseInt(quantity.value) > 0) {
-                if (quantity.name.includes('Each')) {
-                    subTotalInt += parseInt(quantity.value);
-                } else {
-                    subTotalInt += (parseInt(quantity.value) * 10);
-                }
+    subTotalInt = 0;
+    numInputs.forEach(numInput => {
+        if (parseInt(numInput.value) > 0){
+            if (numInput.name. includes('Each')) {
+                subTotalInt += parseInt(numInput.value);
+            } else {
+                subTotalInt += (parseInt(numInput.value) * 10)
             }
-        }
-        subTotal.textContent = `$${parseInt(subTotalInt)}`;
-        total.textContent = `$${(parseInt(subTotalInt)+ 5)}`
-    }
+        }    
+    }) 
+    subTotal.textContent = `$${parseInt(subTotalInt)}`;
+    total.textContent = `$${(parseInt(subTotalInt)+ 5)}`
 };
 
 
